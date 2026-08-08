@@ -1,7 +1,7 @@
 <h1 align="center">🦆 usb-ducky</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/dbisu/pico-ducky/main/images/setup-mode.png" width="480" alt="usb-ducky banner">
+  <img src="https://raw.githubusercontent.com/vishwakumarv/usb-ducky/main/images/setup-mode.png" width="480" alt="usb-ducky banner">
 </p>
 
 <p align="center">Turn a Raspberry Pi Pico into a USB Rubber Ducky using CircuitPython.</p>
@@ -45,7 +45,7 @@ Get a USB-Ducky running in under 5 minutes.
 
 > ⚠️ **Use responsibly.** Only run payloads on devices you own or have explicit permission to test. This project is for security research, red-teaming, and education.
 
-1. Download the latest release from the [Releases page](https://github.com/dbisu/pico-ducky/releases).
+1. Download the latest release from the [Releases page](https://github.com/vishwakumarv/usb-ducky/releases).
 2. Hold the **BOOTSEL** button while plugging the Pico into a USB port. It will mount as a drive named `RPI-RP2`.
 3. Flash CircuitPython for your board by copying the matching `.uf2` file to `RPI-RP2`:
 
@@ -81,7 +81,7 @@ Use **Full Install** if you're cloning the repo, building from source, or want t
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/dbisu/pico-ducky.git
+   git clone https://github.com/vishwakumarv/usb-ducky.git
    ```
 
 2. **Download CircuitPython** (v10.0.3) for your board:
@@ -153,7 +153,7 @@ Setup mode prevents the payload from firing while you're editing it.
 Connect a jumper wire between **pin 1 (`GP0`)** and **pin 3 (`GND`)**.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/dbisu/pico-ducky/main/images/setup-mode.png" width="420" alt="Setup mode jumper wire diagram">
+  <img src="https://raw.githubusercontent.com/vishwakumarv/usb-ducky/main/images/setup-mode.png" width="420" alt="Setup mode jumper wire diagram">
   <br>
   <sub>📌 Jumper between GP0 and GND</sub>
 </p>
@@ -171,7 +171,7 @@ For stealth, you can disable the Pico's USB mass-storage drive so it doesn't sho
 5. To reprogram later, remove the jumper and reconnect to your PC.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/dbisu/pico-ducky/main/images/usb-boot-mode.png" width="420" alt="USB enable/disable mode jumper diagram">
+  <img src="https://raw.githubusercontent.com/vishwakumarv/usb-ducky/main/images/usb-boot-mode.png" width="420" alt="USB enable/disable mode jumper diagram">
   <br>
   <sub>📌 Jumper between GND (pin 18) and GPIO15 (pin 20)</sub>
 </p>
@@ -272,7 +272,7 @@ If your Pico becomes corrupted or won't boot, see [RESET.md](RESET.md).
 - [Ducky Script Reference](https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript)
 
 **Video Tutorials**
-- [pico-ducky tutorial — NetworkChuck](https://www.youtube.com/watch?v=e_f9p-_JWZw)
+- [usb-ducky tutorial — NetworkChuck](https://www.youtube.com/watch?v=e_f9p-_JWZw)
 - [USB Rubber Ducky playlist — Hak5](https://www.youtube.com/playlist?list=PLW5y1tjAOzI0YaJslcjcI4zKI366tMBYk)
 - [CircuitPython on the Raspberry Pi Pico — DroneBot Workshop](https://www.youtube.com/watch?v=07vG-_CcDG0)
 
