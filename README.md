@@ -1,7 +1,7 @@
-<h1 align="center">🦆 pico-ducky</h1>
+<h1 align="center">🦆 usb-ducky</h1>
 
 <p align="center">
-  <img src="images/setup-mode.png" width="480" alt="pico-ducky banner">
+  <img src="https://raw.githubusercontent.com/dbisu/pico-ducky/main/images/setup-mode.png" width="480" alt="usb-ducky banner">
 </p>
 
 <p align="center">Turn a Raspberry Pi Pico into a USB Rubber Ducky using CircuitPython.</p>
@@ -10,7 +10,7 @@
   <img alt="CircuitPython" src="https://img.shields.io/badge/CircuitPython-10.0.3-6E40C9?logo=raspberrypi&logoColor=white">
   <img alt="Platform" src="https://img.shields.io/badge/Board-Pico%20%7C%20Pico%20W%20%7C%20Pico%202-informational">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
-  <img alt="Stars" src="https://img.shields.io/github/stars/dbisu/pico-ducky?style=social">
+  <img alt="Stars" src="https://img.shields.io/github/stars/vishwakumarv/usb-ducky?style=social">
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@
 
 ## 🚀 Quick Start
 
-Get a Pico-Ducky running in under 5 minutes.
+Get a USB-Ducky running in under 5 minutes.
 
 > ⚡ **Fast fact:** a $5 microcontroller + a few Python files = a fully programmable HID injection tool. No proprietary hardware required.
 
@@ -113,7 +113,7 @@ Use **Full Install** if you're cloning the repo, building from source, or want t
     secrets = { 'ssid' : "BadAPName", 'password' : "badpassword" }
     ```
 
-13. Get a payload script from the [Hak5 payloads repo](https://github.com/hak5/usbrubberducky-payloads) or [write your own](https://docs.hak5.org/hak5-usb-rubber-ducky/ducky-script-basics/hello-world), then save it as `payload.dd` on the Pico. Note: pico-ducky currently supports DuckyScript 1.0 and partial 3.0 support.
+13. Get a payload script from the [Hak5 payloads repo](https://github.com/hak5/usbrubberducky-payloads) or [write your own](https://docs.hak5.org/hak5-usb-rubber-ducky/ducky-script-basics/hello-world), then save it as `payload.dd` on the Pico. Note: usb-ducky currently supports DuckyScript 1.0 and partial 3.0 support.
 
 14. ⚠️ If the device is **not** in setup mode, it will reboot and execute the script after about half a second.
 
@@ -153,7 +153,7 @@ Setup mode prevents the payload from firing while you're editing it.
 Connect a jumper wire between **pin 1 (`GP0`)** and **pin 3 (`GND`)**.
 
 <p align="center">
-  <img src="images/setup-mode.png" width="420" alt="Setup mode jumper wire diagram">
+  <img src="https://raw.githubusercontent.com/dbisu/pico-ducky/main/images/setup-mode.png" width="420" alt="Setup mode jumper wire diagram">
   <br>
   <sub>📌 Jumper between GP0 and GND</sub>
 </p>
@@ -171,7 +171,7 @@ For stealth, you can disable the Pico's USB mass-storage drive so it doesn't sho
 5. To reprogram later, remove the jumper and reconnect to your PC.
 
 <p align="center">
-  <img src="images/usb-boot-mode.png" width="420" alt="USB enable/disable mode jumper diagram">
+  <img src="https://raw.githubusercontent.com/dbisu/pico-ducky/main/images/usb-boot-mode.png" width="420" alt="USB enable/disable mode jumper diagram">
   <br>
   <sub>📌 Jumper between GND (pin 18) and GPIO15 (pin 20)</sub>
 </p>
