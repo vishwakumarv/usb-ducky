@@ -1,10 +1,28 @@
-<h1 align="center">pico-ducky</h1>
+<h1 align="center">🦆 pico-ducky</h1>
+
+<p align="center">
+  <img src="images/setup-mode.png" width="480" alt="pico-ducky banner">
+</p>
 
 <p align="center">Turn a Raspberry Pi Pico into a USB Rubber Ducky using CircuitPython.</p>
 
+<p align="center">
+  <img alt="CircuitPython" src="https://img.shields.io/badge/CircuitPython-10.0.3-6E40C9?logo=raspberrypi&logoColor=white">
+  <img alt="Platform" src="https://img.shields.io/badge/Board-Pico%20%7C%20Pico%20W%20%7C%20Pico%202-informational">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+  <img alt="Stars" src="https://img.shields.io/github/stars/dbisu/pico-ducky?style=social">
+</p>
+
+<p align="center">
+  <a href="#quick-start">🚀 Quick Start</a> •
+  <a href="#full-install-instructions">🛠️ Full Install</a> •
+  <a href="#changing-keyboard-layouts">⌨️ Keyboard Layouts</a> •
+  <a href="#resources">📚 Resources</a>
+</p>
+
 ---
 
-## Table of Contents
+## 📖 Table of Contents
 
 - [Quick Start](#quick-start)
 - [Full Install Instructions](#full-install-instructions)
@@ -19,9 +37,13 @@
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 Get a Pico-Ducky running in under 5 minutes.
+
+> ⚡ **Fast fact:** a $5 microcontroller + a few Python files = a fully programmable HID injection tool. No proprietary hardware required.
+
+> ⚠️ **Use responsibly.** Only run payloads on devices you own or have explicit permission to test. This project is for security research, red-teaming, and education.
 
 1. Download the latest release from the [Releases page](https://github.com/dbisu/pico-ducky/releases).
 2. Hold the **BOOTSEL** button while plugging the Pico into a USB port. It will mount as a drive named `RPI-RP2`.
@@ -44,9 +66,18 @@ Get a Pico-Ducky running in under 5 minutes.
 
 ---
 
-## Full Install Instructions
+## 🛠️ Full Install Instructions
 
 A more detailed walkthrough for a from-scratch setup.
+
+<details>
+<summary>🤔 <b>Quick Start vs Full Install — which one do I need?</b></summary>
+<br>
+
+Use **Quick Start** if you just downloaded a release zip and want to flash it fast.
+Use **Full Install** if you're cloning the repo, building from source, or want to understand every file being copied.
+</details>
+<br>
 
 1. **Clone the repo:**
    ```bash
@@ -90,7 +121,7 @@ A more detailed walkthrough for a from-scratch setup.
 
 ---
 
-## Pico W Web Service
+## 🌐 Pico W Web Service
 
 The Pico W broadcasts its own access point, defaulting to `192.168.4.1`. The web interface is available at:
 
@@ -115,17 +146,21 @@ http://192.168.4.1:80
 
 ---
 
-## Setup Mode
+## 🔧 Setup Mode
 
 Setup mode prevents the payload from firing while you're editing it.
 
 Connect a jumper wire between **pin 1 (`GP0`)** and **pin 3 (`GND`)**.
 
-![Setup mode with a jumper](images/setup-mode.png)
+<p align="center">
+  <img src="images/setup-mode.png" width="420" alt="Setup mode jumper wire diagram">
+  <br>
+  <sub>📌 Jumper between GP0 and GND</sub>
+</p>
 
 ---
 
-## USB Enable/Disable Mode
+## 🕵️ USB Enable/Disable Mode
 
 For stealth, you can disable the Pico's USB mass-storage drive so it doesn't show up when plugged into a target machine.
 
@@ -135,7 +170,11 @@ For stealth, you can disable the Pico's USB mass-storage drive so it doesn't sho
 4. Connect a jumper between **pin 18 (`GND`)** and **pin 20 (`GPIO15`)**.
 5. To reprogram later, remove the jumper and reconnect to your PC.
 
-![USB enable/disable mode](images/usb-boot-mode.png)
+<p align="center">
+  <img src="images/usb-boot-mode.png" width="420" alt="USB enable/disable mode jumper diagram">
+  <br>
+  <sub>📌 Jumper between GND (pin 18) and GPIO15 (pin 20)</sub>
+</p>
 
 **Defaults:**
 - **Pico:** USB mass storage **enabled**
@@ -143,7 +182,7 @@ For stealth, you can disable the Pico's USB mass-storage drive so it doesn't sho
 
 ---
 
-## Multiple Payloads
+## 🎯 Multiple Payloads
 
 You can store several payloads on the device and select one by grounding a specific pin:
 
@@ -156,7 +195,7 @@ You can store several payloads on the device and select one by grounding a speci
 
 ---
 
-## Changing Keyboard Layouts
+## ⌨️ Changing Keyboard Layouts
 
 *Adapted from [Neradoc/Circuitpython_Keyboard_Layouts](https://github.com/Neradoc/Circuitpython_Keyboard_Layouts/blob/main/PICODUCKY.md)*
 
@@ -216,13 +255,13 @@ keycode_win_de.mpy
 
 ---
 
-## Recovery
+## 🩹 Recovery
 
 If your Pico becomes corrupted or won't boot, see [RESET.md](RESET.md).
 
 ---
 
-## Resources
+## 📚 Resources
 
 **Tools**
 - [PicoDuckyBuilder](https://github.com/ryo-yamada/PicoDuckyBuilder) by [ryo-yamada](https://github.com/ryo-yamada) — converts a blank Pico into a ducky.
@@ -239,6 +278,17 @@ If your Pico becomes corrupted or won't boot, see [RESET.md](RESET.md).
 
 ---
 
-## Related Projects
+## 🔗 Related Projects
 
 - [Defcon31-ducky](https://github.com/iot-pwn/defcon31-ducky)
+
+---
+
+<p align="center">
+  <sub>Made with 🦆, jumper wires, and a healthy respect for keyboards you don't own.</sub>
+</p>
+
+<p align="center">
+  <img alt="Built with CircuitPython" src="https://img.shields.io/badge/built%20with-CircuitPython-6E40C9?logo=raspberrypi&logoColor=white">
+  <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen">
+</p>
